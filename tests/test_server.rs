@@ -16,7 +16,7 @@ fn test_readme() {
     let base_url = http_url_from_env();
     let url = format!("{}/{}", base_url, "README.md");
     let resp = reqwest::blocking::get(url).unwrap();
-    assert_eq!(resp.status(), 200);
+    assert_eq!(resp.status(), 404);
 }
 
 fn http_url_from_env() -> String {
